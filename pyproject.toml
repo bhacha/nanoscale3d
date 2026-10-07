@@ -1,5 +1,5 @@
 [project]
-name = "package_name"  # Replace package_name with actual name (it's just a template).
+name = "nanoscale3d"  # Replace nanoscale3d with actual name (it's just a template).
 dynamic = ["version"]
 authors = [
     {name = "Scientifc Software Engineering Center at JHU", email = "ssec@jhu.edu"},
@@ -33,9 +33,9 @@ docs = [
 ]
 
 [project.urls]
-homepage = "https://github.com/ssec-jhu/base-template"
-documentation = "https://github.com/ssec-jhu/base-template"
-repository = "https://github.com/ssec-jhu/base-template"
+homepage = "https://github.com/ssec-jhu/nanoscale3d"
+documentation = "https://github.com/ssec-jhu/nanoscale3d"
+repository = "https://github.com/ssec-jhu/nanoscale3d"
 
 [build-system]
 requires = ["setuptools>=84.0.0", "setuptools_scm[toml]>=10.3.4"]
@@ -47,11 +47,11 @@ include-package-data = true
 exclude-package-data = {"*" = ["tests/*"]}
 
 [tool.setuptools.packages.find]
-include = ["package_name*"]
+include = ["nanoscale3d*"]
 exclude = ["*.tests*"]
 
 [tool.setuptools_scm]
-write_to = "package_name/_version.py"  # Replace package_name with actual name (it's just a template).
+write_to = "nanoscale3d/_version.py"  # Replace nanoscale3d with actual name (it's just a template).
 
 [tool.bandit]
 exclude_dirs = ["tests"]
@@ -97,6 +97,8 @@ exclude = [
     "venv",
     "_version.py"
 ]
+# Research scripts and notebooks, not package code.
+extend-exclude = ["examples"]
 target-version = "py311"
 
 [tool.ruff.lint.pydocstyle] # https://docs.astral.sh/ruff/settings/#lint_pydocstyle_convention
